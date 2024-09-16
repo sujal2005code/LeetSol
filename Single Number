@@ -1,0 +1,12 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int ans = 0;
+        
+        // Correct loop condition
+        for (int i = 0; i < nums.size(); i++) {
+            ans = ans ^ nums[i];  // XOR operation to find the single number
+        }
+        return ans;
+    }
+};
